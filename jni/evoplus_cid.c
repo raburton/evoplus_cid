@@ -44,7 +44,7 @@ int cid_backdoor(int fd) {
 	return ret;
 }
 
-int program_cid(int fd, char *cid) {
+int program_cid(int fd, const unsigned char *cid) {
 	int ret;
 	struct mmc_ioc_cmd idata = {0};
 
@@ -65,15 +65,15 @@ int program_cid(int fd, char *cid) {
 	return ret;
 }
 
-void show_cid(char *cid) {
+void show_cid(const unsigned char *cid) {
 	int i;
-	for(i = 0; i < CID_SIZE; i++){
+	for (i = 0; i < CID_SIZE; i++){
 		printf("%02x", cid[i]);
 	}
 	printf("\n");
 }
 
-unsigned char crc7(unsigned char data[], int len) {
+unsigned char crc7(const unsigned char data[], int len) {
 
 	int count;
 	unsigned char crc = 0;
@@ -116,9 +116,9 @@ int parse_serial(const char *str) {
 
 void main(int argc, const char **argv) {
 	int fd, ret, i, len;
-	char cid[CID_SIZE] = {0};
+	unsigned char cid[CID_SIZE] = {0};
 
-	if(argc != 3 && argc != 4) {
+	if (argc != 3 && argc != 4) {
 		printf("Usage: ./evoplus_cid <device> <cid> [serial]\n");
 		printf("device - sd card block device e.g. /dev/block/mmcblk1\n");
 		printf("cid - new cid, must be in hex (without 0x prefix)\n");
@@ -133,15 +133,15 @@ void main(int argc, const char **argv) {
 	}
 
 	len = strlen(argv[2]);
-	if(len != 30 && len != 32) {
+	if (len != 30 && len != 32) {
 		printf("cid should be 30 or 32 chars long\n");
 		return;
 	}
 
 	// parse cid
-	for(i = 0; i < (len/2); i++){
+	for (i = 0; i < (len/2); i++){
 		ret = sscanf(&argv[2][i*2], "%2hhx", &cid[i]);
-		if(!ret){
+		if (!ret){
 			printf("cid should be hex (without 0x prefix)!\n");
 			return;
 		}
@@ -159,7 +159,7 @@ void main(int argc, const char **argv) {
 
 	// open device
 	fd = open(argv[1], O_RDWR);
-	if(fd < 0){
+	if (fd < 0){
 		printf("Unable to open device %s\n", argv[1]);
 		return;
 	}
@@ -172,7 +172,7 @@ void main(int argc, const char **argv) {
 		printf("Writing new CID: ");
 		show_cid(cid);
 		ret = program_cid(fd, cid);
-		if(!ret){
+		if (!ret){
 			printf("Success! Remove and reinsert SD card to check new CID.\n");
 		}
 	}
