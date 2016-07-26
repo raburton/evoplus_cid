@@ -1,5 +1,7 @@
 # evoplus_cid
-Tool to change the CID on Samsung Evo Plus SD Cards.
+Tool to change the CID on Samsung Evo Plus SD Cards. Requires rooted Android device.
+Precompiled Android binary included. May also work on regular Linux, but you must use
+a real sd controller, not a usb mass storage type sd reader.
 See http://richard.burtons.org/2016/07/01/changing-the-cid-on-an-sd-card/
 for more details.
 
