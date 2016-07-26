@@ -124,7 +124,7 @@ void main(int argc, const char **argv) {
 		printf("cid - new cid, must be in hex (without 0x prefix)\n");
 		printf("  it can be 32 chars with checksum or 30 chars without, it will\n");
 		printf("  be updated with new serial number if supplied, the checksum is\n");
-		printf("  always recalculated\n");
+		printf("  (re)calculated if not supplied or new serial applied\n");
 		printf("serial - optional, can be hex (0x prefixed) or decimal\n");
 		printf("  and will be applied to the supplied cid before writing\n");
 		printf("\n");
@@ -152,13 +152,15 @@ void main(int argc, const char **argv) {
 		*((int*)&cid[9]) = htonl(parse_serial(argv[3]));
 	}
 
-	// calculate checksum
-	cid[15] = crc7(cid, 15);
+	// calculate checksum if required
+	if (len != 32 || argc == 4) {
+		cid[15] = crc7(cid, 15);
+	}
 
 	// open device
 	fd = open(argv[1], O_RDWR);
 	if(fd < 0){
-		printf("[-] wtf\n");
+		printf("Unable to open device %s\n", argv[1]);
 		return;
 	}
 
