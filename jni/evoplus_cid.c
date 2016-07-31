@@ -55,7 +55,7 @@ int program_cid(int fd, const unsigned char *cid) {
 	idata.flags = MMC_RSP_SPI_R1 | MMC_RSP_R1 | MMC_CMD_ADTC;
 	idata.blksz = CID_SIZE;
 	idata.blocks = 1;
-	idata.data_ptr = (__u64)(unsigned int)cid;
+	idata.data_ptr = (__u64)cid;
 
 	ret = ioctl(fd, MMC_IOC_CMD, &idata);
 	if (ret) {
@@ -134,7 +134,7 @@ void main(int argc, const char **argv) {
 
 	len = strlen(argv[2]);
 	if (len != 30 && len != 32) {
-		printf("cid should be 30 or 32 chars long\n");
+		printf("CID should be 30 or 32 chars long!\n");
 		return;
 	}
 
@@ -142,7 +142,7 @@ void main(int argc, const char **argv) {
 	for (i = 0; i < (len/2); i++){
 		ret = sscanf(&argv[2][i*2], "%2hhx", &cid[i]);
 		if (!ret){
-			printf("cid should be hex (without 0x prefix)!\n");
+			printf("CID should be hex (without 0x prefix)!\n");
 			return;
 		}
 	}
