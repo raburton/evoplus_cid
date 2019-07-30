@@ -22,3 +22,8 @@ serial - optional, can be hex (0x prefixed) or decimal
 Based on the reverse engineering and code of Sean Beaupre,
 see: https://github.com/beaups/SamsungCID
 
+## Compile
+
+`gcc evoplus_cid.c -o evoplus_cid`
+
+You can safely ignore compilation warnings.
