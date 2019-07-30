@@ -3,73 +3,73 @@
 
 
 #define UNNAMED_MAJOR		0
-#define MEM_MAJOR		1
+#define MEM_MAJOR		    1
 #define RAMDISK_MAJOR		1
 #define FLOPPY_MAJOR		2
 #define PTY_MASTER_MAJOR	2
-#define IDE0_MAJOR		3
-#define HD_MAJOR		IDE0_MAJOR
+#define IDE0_MAJOR		    3
+#define HD_MAJOR		    IDE0_MAJOR
 #define PTY_SLAVE_MAJOR		3
-#define TTY_MAJOR		4
+#define TTY_MAJOR		    4
 #define TTYAUX_MAJOR		5
-#define LP_MAJOR		6
-#define VCS_MAJOR		7
-#define LOOP_MAJOR		7
+#define LP_MAJOR		    6
+#define VCS_MAJOR		    7
+#define LOOP_MAJOR		    7
 #define SCSI_DISK0_MAJOR	8
 #define SCSI_TAPE_MAJOR		9
-#define MD_MAJOR		9
-#define MISC_MAJOR		10
+#define MD_MAJOR		    9
+#define MISC_MAJOR		    10
 #define SCSI_CDROM_MAJOR	11
-#define MUX_MAJOR		11	
+#define MUX_MAJOR		    11
 #define XT_DISK_MAJOR		13
-#define INPUT_MAJOR		13
-#define SOUND_MAJOR		14
+#define INPUT_MAJOR		    13
+#define SOUND_MAJOR		    14
 #define CDU31A_CDROM_MAJOR	15
 #define JOYSTICK_MAJOR		15
-#define GOLDSTAR_CDROM_MAJOR	16
+#define GOLDSTAR_CDROM_MAJOR 16
 #define OPTICS_CDROM_MAJOR	17
 #define SANYO_CDROM_MAJOR	18
 #define CYCLADES_MAJOR		19
 #define CYCLADESAUX_MAJOR	20
-#define MITSUMI_X_CDROM_MAJOR	20
-#define MFM_ACORN_MAJOR		21	
+#define MITSUMI_X_CDROM_MAJOR 20
+#define MFM_ACORN_MAJOR		21
 #define SCSI_GENERIC_MAJOR	21
-#define IDE1_MAJOR		22
+#define IDE1_MAJOR		    22
 #define DIGICU_MAJOR		22
-#define DIGI_MAJOR		23
+#define DIGI_MAJOR		    23
 #define MITSUMI_CDROM_MAJOR	23
 #define CDU535_CDROM_MAJOR	24
 #define STL_SERIALMAJOR		24
-#define MATSUSHITA_CDROM_MAJOR	25
+#define MATSUSHITA_CDROM_MAJOR 25
 #define STL_CALLOUTMAJOR	25
 #define MATSUSHITA_CDROM2_MAJOR	26
 #define QIC117_TAPE_MAJOR	27
 #define MATSUSHITA_CDROM3_MAJOR	27
 #define MATSUSHITA_CDROM4_MAJOR	28
 #define STL_SIOMEMMAJOR		28
-#define ACSI_MAJOR		28
+#define ACSI_MAJOR		    28
 #define AZTECH_CDROM_MAJOR	29
-#define FB_MAJOR		29   
+#define FB_MAJOR		    29
 #define CM206_CDROM_MAJOR	32
-#define IDE2_MAJOR		33
-#define IDE3_MAJOR		34
-#define Z8530_MAJOR		34
-#define XPRAM_MAJOR		35   
+#define IDE2_MAJOR		    33
+#define IDE3_MAJOR		    34
+#define Z8530_MAJOR		    34
+#define XPRAM_MAJOR		    35
 #define NETLINK_MAJOR		36
 #define PS2ESDI_MAJOR		36
 #define IDETAPE_MAJOR		37
-#define Z2RAM_MAJOR		37
-#define APBLOCK_MAJOR		38   
-#define DDV_MAJOR		39   
-#define NBD_MAJOR		43   
-#define RISCOM8_NORMAL_MAJOR	48
-#define DAC960_MAJOR		48   
-#define RISCOM8_CALLOUT_MAJOR	49
-#define MKISS_MAJOR		55
-#define DSP56K_MAJOR		55   
+#define Z2RAM_MAJOR		    37
+#define APBLOCK_MAJOR		38
+#define DDV_MAJOR		    39
+#define NBD_MAJOR		    43
+#define RISCOM8_NORMAL_MAJOR 48
+#define DAC960_MAJOR		48
+#define RISCOM8_CALLOUT_MAJOR 49
+#define MKISS_MAJOR		    55
+#define DSP56K_MAJOR		55
 
-#define IDE4_MAJOR		56
-#define IDE5_MAJOR		57
+#define IDE4_MAJOR		    56
+#define IDE5_MAJOR		    57
 
 #define SCSI_DISK1_MAJOR	65
 #define SCSI_DISK2_MAJOR	66
@@ -79,7 +79,7 @@
 #define SCSI_DISK6_MAJOR	70
 #define SCSI_DISK7_MAJOR	71
 
-#define COMPAQ_SMART2_MAJOR	72
+#define COMPAQ_SMART2_MAJOR	    72
 #define COMPAQ_SMART2_MAJOR1	73
 #define COMPAQ_SMART2_MAJOR2	74
 #define COMPAQ_SMART2_MAJOR3	75
@@ -91,11 +91,11 @@
 #define SPECIALIX_NORMAL_MAJOR	75
 #define SPECIALIX_CALLOUT_MAJOR	76
 
-#define AURORA_MAJOR		79
+#define AURORA_MAJOR		    79
 
-#define I2O_MAJOR		80	
+#define I2O_MAJOR		80
 
-#define SHMIQ_MAJOR		85   
+#define SHMIQ_MAJOR		85
 #define SCSI_CHANGER_MAJOR      86
 
 #define IDE6_MAJOR		88
@@ -114,8 +114,8 @@
 
 #define PHONE_MAJOR		100
 
-#define COMPAQ_CISS_MAJOR	104
-#define COMPAQ_CISS_MAJOR1	105
+#define COMPAQ_CISS_MAJOR	    104
+#define COMPAQ_CISS_MAJOR1	    105
 #define COMPAQ_CISS_MAJOR2      106
 #define COMPAQ_CISS_MAJOR3      107
 #define COMPAQ_CISS_MAJOR4      108
@@ -123,10 +123,10 @@
 #define COMPAQ_CISS_MAJOR6      110
 #define COMPAQ_CISS_MAJOR7      111
 
-#define VIODASD_MAJOR		112
-#define VIOCD_MAJOR		113
+#define VIODASD_MAJOR		    112
+#define VIOCD_MAJOR		        113
 
-#define ATARAID_MAJOR		114
+#define ATARAID_MAJOR		    114
 
 #define SCSI_DISK8_MAJOR	128
 #define SCSI_DISK9_MAJOR	129
@@ -149,18 +149,18 @@
 #define USB_ACM_AUX_MAJOR	167
 #define USB_CHAR_MAJOR		180
 
-#define MMC_BLOCK_MAJOR		179
+#define MMC_BLOCK_MAJOR	179
 
-#define VXVM_MAJOR		199	
-#define VXSPEC_MAJOR		200	
-#define VXDMP_MAJOR		201	
+#define VXVM_MAJOR		199
+#define VXSPEC_MAJOR	200
+#define VXDMP_MAJOR		201
 
-#define XENVBD_MAJOR		202	
+#define XENVBD_MAJOR	202
 
 #define MSR_MAJOR		202
 #define CPUID_MAJOR		203
 
-#define OSST_MAJOR		206	
+#define OSST_MAJOR		206
 
 #define IBM_TTY3270_MAJOR	227
 #define IBM_FS3270_MAJOR	228
@@ -168,7 +168,6 @@
 #define VIOTAPE_MAJOR		230
 
 #define BLOCK_EXT_MAJOR		259
-#define SCSI_OSD_MAJOR		260	
+#define SCSI_OSD_MAJOR		260
 
 #endif
-
